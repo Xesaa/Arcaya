@@ -1,0 +1,107 @@
+.collection-section {
+    padding: 20px 80px 80px 80px;
+}
+
+.collection-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2em;
+    color: #E2C48D; 
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.collection-section .subtitle {
+    color: #C8C8C8;
+    font-size: 1em;
+    margin-bottom: 40px;
+}
+
+.category-group {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #3A3A3A; 
+}
+
+.category-group h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8em;
+    color: #C8C8C8;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.collection-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+}
+
+/* Anda bisa mengimpor item-card styling dari style.css/gallery-style.css
+   atau pastikan item-card styling di style.css mencakup halaman ini. */
+
+.item-card {
+    background-color: #1A1A1A;
+    width: 21rem;
+    height: 31rem;
+    border-radius: 8px;
+    padding: 0; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.item-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.item-card img {
+    width: 100%;
+    border-radius: 8px 8px 0 0; 
+    height: 300px; 
+    object-fit: cover;
+    margin-bottom: 0; 
+    display: block;
+}
+
+.card-info {
+    padding: 15px 15px 10px 15px;
+}
+
+.item-card h4 {
+    /* font-family: 'Playfair Display', serif; */
+    font-size: 1em;
+    color: #E2C48D;
+    margin: 0 0 5px 0;
+    text-align: left;
+}
+
+.item-card .origin-thumb {
+    font-size: 0.85em;
+    color: #C8C8C8;
+    margin: 0; 
+    text-align: left;
+}
+
+.detail-btn {
+    display: block;
+    width: 50%;
+    padding: 10px 0;
+    margin: 10px 15px 15px 15px; 
+    width: auto; 
+    background-color:#3A3A3A;
+    color: #E2C48D;
+    text-decoration: none;
+    font-size: smaller;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.detail-btn:hover {
+    background-color: #E2C48D;
+    color: #3A3A3A;
+}
