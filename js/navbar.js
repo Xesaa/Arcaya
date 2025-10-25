@@ -1,41 +1,45 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   if (window.navbarLoaded) return;
   window.navbarLoaded = true;
 
-  const navbarContainer = document.getElementById('navbar-container');
+  const navbarContainer = document.getElementById("navbar-container");
   if (!navbarContainer) return;
 
-  // Tentukan path file navbar (kalau di dalam /items/, naik satu folder)
-  let navbarPath = 'navbar.html';
-  if (window.location.pathname.includes('/items/')) {
-    navbarPath = '../navbar.html';
+  let navbarPath = "navbar.html";
+  if (window.location.pathname.includes("/items/")) {
+    navbarPath = "../navbar.html";
   }
 
   fetch(navbarPath)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
+    .then((response) => {
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
       return response.text();
     })
-    .then(data => {
+    .then((data) => {
       navbarContainer.innerHTML = data;
 
-      // Ambil path URL saat ini tanpa domain dan ekstensi
-      const currentPath = window.location.pathname.split('/').pop().replace('.html', '').toLowerCase();
+      const currentPage = window.location.pathname
+        .split("/")
+        .pop()
+        .replace(".html", "")
+        .toLowerCase();
 
-      const links = document.querySelectorAll('.nav-links a');
-      links.forEach(link => {
-        const href = link.getAttribute('href')?.replace('.html', '').toLowerCase();
+      const links = document.querySelectorAll(".nav-links a");
 
-        // Match juga untuk index.html atau halaman utama
+      links.forEach((link) => {
+        let href = link.getAttribute("href");
+        if (!href) return;
+
+        href = href.split("/").pop().replace(".html", "").toLowerCase();
+
         if (
-          (currentPath === '' && href.includes('index')) ||
-          currentPath === href
+          (currentPage === "" && href === "index") ||
+          (currentPage === "index" && href === "index") ||
+          currentPage === href
         ) {
-          link.classList.add('active');
+          link.classList.add("active");
         }
       });
     })
-    .catch(error => console.error('Gagal memuat navbar:', error));
+    .catch((err) => console.error("Gagal memuat navbar:", err));
 });
