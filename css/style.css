@@ -29,23 +29,6 @@ body {
   backdrop-filter: none !important;
 }
 
-.navbar,
-.navbar * {
-  background: transparent !important;
-  box-shadow: none !important;
-}
-
-.navbar *,
-.navbar::before,
-.navbar::after {
-  background: transparent !important;
-  background-color: transparent !important;
-  box-shadow: none !important;
-  border: none !important;
-  backdrop-filter: none !important;
-}
-
-
 .nav-links {
   display: flex;
   list-style: none;
