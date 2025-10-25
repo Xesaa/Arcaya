@@ -104,6 +104,34 @@ header,
   border-radius: 2px;
 }
 
+/* === NAVBAR TRANSPARAN KHUSUS HALAMAN HOME === */
+body.home .navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+  backdrop-filter: none !important;
+  z-index: 10;
+}
+
+/* === NAVBAR NORMAL UNTUK HALAMAN LAIN === */
+body:not(.home) .navbar {
+  position: relative;
+  background-color: #0D0D0D !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* === TAMBAH JARAK DI HALAMAN LAIN SUPAYA KONTEN NGGAK NABRAK NAVBAR === */
+body:not(.home) main,
+body:not(.home) section:first-of-type {
+  padding-top: 100px; /* kira-kira tinggi navbar */
+}
+
+
 .logo img {
   height: 120px; 
   margin-top: 1.5rem;
