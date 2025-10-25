@@ -94,7 +94,7 @@ function createArtefactCard(data) {
     <div class="item-card" data-id="${data.id}">
       <button class="remove-btn" data-id="${data.id}" title="Hapus Koleksi">×</button>
       <a href="${data.detailUrl}">
-        <img src="${data.thumb}" alt="${data.title}">
+        <img src="${data.thumb}" alt="${data.title}" loading="lazy">
       </a>
       <div class="card-info">
         <h4>${data.title}</h4>

@@ -137,7 +137,7 @@ body:not(.home) section:first-of-type {
 .hero {
   position: relative;
   height: 100vh;
-  background: url("../asset/background-homepage.png") center/cover no-repeat;
+  background: url("../asset/background-homepage.webp") center/cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
