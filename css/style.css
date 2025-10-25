@@ -709,49 +709,44 @@ h2 {
   }
 
   section {
-    padding: 60px 20px; /* Padding vertikal 60px, horizontal 20px */
+    padding: 60px 20px; 
   }
   
-  /* Penyesuaian untuk halaman Galeri dan Koleksi */
   .gallery-section {
-    padding: 20px 20px 60px 20px; /* Sesuaikan padding juga */
+    padding: 20px 20px 60px 20px;
     margin-top: -50px; 
   }
 
-  /* Mengubah Collection Grid menjadi satu kolom */
   .collection-grid {
-    grid-template-columns: 1fr; /* Satu kolom untuk mobile */
-    gap: 30px; /* Jarak antar item diperbesar */
+    grid-template-columns: 1fr;
+    gap: 30px; 
     margin-top: 20px;
   }
   
-  /* Kartu Item disesuaikan agar full width atau lebar maksimal */
   .item-card {
-      width: 100%; /* Lebar penuh dari container */
-      max-width: 350px; /* Batasi lebar maksimal agar tidak terlalu besar di tablet */
-      margin: 0 auto; /* Pusatkan kartu */
+      width: 100%; 
+      max-width: 350px; 
+      margin: 0 auto;
   }
 
-  /* Penyesuaian untuk halaman About */
   .about-section {
     padding: 40px 20px;
     margin-top: -50px;
   }
   
   .about-wrapper {
-      flex-direction: column; /* Tumpuk konten About & gambar */
+      flex-direction: column;
       gap: 30px;
   }
 
-  /* Penyesuaian untuk Footer */
   .footer {
-    padding: 30px 20px; /* Kurangi padding */
+    padding: 30px 20px;
   }
   
   .footer-content {
-    flex-direction: column; /* Tumpuk konten footer (logo, link 1, link 2) */
+    flex-direction: column;
     gap: 25px;
-    text-align: center; /* Pusatkan teks */
+    text-align: center; 
   }
   
   .footer-left, .footer-center, .footer-right {
@@ -761,21 +756,20 @@ h2 {
 
   .footer-logo {
       margin-top: 0;
-      width: 180px; /* Logo footer lebih kecil */
+      width: 180px;
       margin: 0 auto;
   }
   
   .footer-center h3,
   .footer-right h3 {
-      margin-top: 15px; /* Jarak antar bagian */
+      margin-top: 15px; 
   }
   
   .footer-center ul,
   .footer-right ul {
-      text-align: center; /* Pastikan list item juga rata tengah */
+      text-align: center;
   }
   
-  /* Hero section content */
   .hero-content h1 {
     font-size: 36px;
   }
@@ -784,7 +778,6 @@ h2 {
     font-size: 16px;
   }
   
-  /* About section di Homepage */
   .about-sectionhome {
       padding: 60px 20px;
   }
@@ -797,13 +790,11 @@ h2 {
       font-size: 1em;
   }
   
-  /* Penyesuaian line/divider */
   .section-divider {
       width: 100%;
       margin: 30px auto;
   }
   
-  /* Gallery Content Block */
   .gallery-content {
       flex-direction: column;
       gap: 30px;

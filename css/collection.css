@@ -103,10 +103,6 @@
     color: #3A3A3A;
 }
 
-/* ================================== */
-/* RESPONSIVE DESIGN */
-/* ================================== */
-
 @media (max-width: 1024px) {
     .collection-section {
         padding: 20px 40px 60px 40px;
