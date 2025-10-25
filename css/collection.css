@@ -102,3 +102,114 @@
     background-color: #E2C48D;
     color: #3A3A3A;
 }
+
+/* ================================== */
+/* RESPONSIVE DESIGN */
+/* ================================== */
+
+@media (max-width: 1024px) {
+    .collection-section {
+        padding: 20px 40px 60px 40px;
+    }
+
+    .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .item-card {
+        width: 18rem;
+        height: 29rem;
+    }
+
+    .category-group h3 {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 768px) {
+    .collection-section {
+        padding: 20px 20px 60px 20px;
+    }
+
+    .collection-section h2 {
+        font-size: 1.8em;
+        text-align: center;
+        display: block;
+    }
+
+    .collection-section .subtitle {
+        text-align: center;
+        font-size: 0.95em;
+        margin-bottom: 30px;
+    }
+
+    .category-group {
+        border-bottom: none;
+        padding-bottom: 10px;
+    }
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .item-card {
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .item-card img {
+        height: 260px;
+    }
+
+    .card-info {
+        text-align: center;
+    }
+
+    .item-card h4,
+    .item-card .origin-thumb {
+        text-align: center;
+    }
+
+    .detail-btn {
+        margin: 10px auto 20px;
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .collection-section {
+        padding: 15px;
+    }
+
+    .collection-section h2 {
+        font-size: 1.5em;
+    }
+
+    .category-group h3 {
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    .collection-grid {
+        gap: 20px;
+    }
+
+    .item-card {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+    }
+
+    .item-card img {
+        height: 220px;
+    }
+
+    .detail-btn {
+        width: 100%;
+        font-size: 0.9em;
+    }
+}

@@ -654,52 +654,42 @@ h2 {
   transform: scale(1.1);
 }
 
-/* ... (kode CSS Anda yang tidak berubah di atas, dari baris 1 sampai baris 485) ... */
 
-/* ---------------------------------- */
-/* MEDIA QUERY FOR MOBILE RESPONSIVENESS */
-/* ---------------------------------- */
 @media (max-width: 768px) {
-  /* Adjust main navbar container */
+
   .navbar {
     height: auto;
-    /* Tetap row agar semua item sejajar horizontal */
     flex-direction: row; 
-    /* Menggunakan space-evenly untuk distribusi yang lebih merata di antara semua item */
-    justify-content: space-evenly; 
+    justify-content: center; 
     align-items: center; 
-    padding: 10px 10px; /* Kurangi padding agar lebih banyak ruang */
-    gap: 10px; 
-    flex-wrap: wrap; /* Izinkan untuk wrap jika terlalu sempit */
+    padding: 10px 15px; 
+    gap: 25px;
+    flex-wrap: nowrap; 
   }
 
-  /* Atur agar grup tautan menjadi flex row untuk sejajar horizontal */
   .nav-links {
-    flex-direction: row; /* <--- KUNCI: Ubah menjadi row agar tautan sejajar */
-    gap: 15px; /* Sesuaikan jarak antar tautan (Home & Gallery, dll.) */
+    flex-direction: row; 
+    gap: 12px; 
     margin-top: 0;
     padding: 0;
-    flex: 1 1 auto; /* Ambil ruang yang diperlukan */
-    justify-content: center; /* Pusatkan tautan dalam grup */
+    flex: 0 0 auto; 
+    justify-content: center; 
   }
   
-  /* Atur logo agar lebih besar dan berada di tengah */
   .logo {
-      order: 0; /* Pastikan logo tetap di tengah */
+      order: 0; 
       flex: 0 0 auto;
   }
   .logo img {
-    height: 90px; /* <--- KUNCI: Ukuran logo diperbesar */
+    height: 110px; 
     margin-top: 0;
     transform: none;
   }
   
-  /* Penyesuaian tampilan tautan */
   .nav-links a {
-    font-size: 15px; /* Sedikit lebih besar dari sebelumnya */
+    font-size: 14px; 
   }
 
-  /* Garis aktif/hover */
   .nav-links a.active::after,
   .nav-links a:hover::after {
     left: 50%;
@@ -708,37 +698,175 @@ h2 {
     bottom: -2px; 
   }
   
-  /* Posisikan grup tautan ke kiri dan kanan dari logo (opsional, tergantung tampilan yang diinginkan) */
   .navbar > .nav-links:first-of-type {
       order: -1; 
-      /* Tambahkan sedikit ruang tambahan di grup kiri agar tidak terlalu dekat dengan logo */
-      padding-right: 5px; 
+      justify-content: flex-end; 
   }
   
   .navbar > .nav-links:last-of-type {
       order: 1; 
-      /* Tambahkan sedikit ruang tambahan di grup kanan */
-      padding-left: 5px; 
+      justify-content: flex-start; 
   }
 
-  /* Reset jika layar terlalu kecil dan harus menumpuk */
+  section {
+    padding: 60px 20px; /* Padding vertikal 60px, horizontal 20px */
+  }
+  
+  /* Penyesuaian untuk halaman Galeri dan Koleksi */
+  .gallery-section {
+    padding: 20px 20px 60px 20px; /* Sesuaikan padding juga */
+    margin-top: -50px; 
+  }
+
+  /* Mengubah Collection Grid menjadi satu kolom */
+  .collection-grid {
+    grid-template-columns: 1fr; /* Satu kolom untuk mobile */
+    gap: 30px; /* Jarak antar item diperbesar */
+    margin-top: 20px;
+  }
+  
+  /* Kartu Item disesuaikan agar full width atau lebar maksimal */
+  .item-card {
+      width: 100%; /* Lebar penuh dari container */
+      max-width: 350px; /* Batasi lebar maksimal agar tidak terlalu besar di tablet */
+      margin: 0 auto; /* Pusatkan kartu */
+  }
+
+  /* Penyesuaian untuk halaman About */
+  .about-section {
+    padding: 40px 20px;
+    margin-top: -50px;
+  }
+  
+  .about-wrapper {
+      flex-direction: column; /* Tumpuk konten About & gambar */
+      gap: 30px;
+  }
+
+  /* Penyesuaian untuk Footer */
+  .footer {
+    padding: 30px 20px; /* Kurangi padding */
+  }
+  
+  .footer-content {
+    flex-direction: column; /* Tumpuk konten footer (logo, link 1, link 2) */
+    gap: 25px;
+    text-align: center; /* Pusatkan teks */
+  }
+  
+  .footer-left, .footer-center, .footer-right {
+      width: 100%;
+      text-align: center;
+  }
+
+  .footer-logo {
+      margin-top: 0;
+      width: 180px; /* Logo footer lebih kecil */
+      margin: 0 auto;
+  }
+  
+  .footer-center h3,
+  .footer-right h3 {
+      margin-top: 15px; /* Jarak antar bagian */
+  }
+  
+  .footer-center ul,
+  .footer-right ul {
+      text-align: center; /* Pastikan list item juga rata tengah */
+  }
+  
+  /* Hero section content */
+  .hero-content h1 {
+    font-size: 36px;
+  }
+  
+  .hero-content p {
+    font-size: 16px;
+  }
+  
+  /* About section di Homepage */
+  .about-sectionhome {
+      padding: 60px 20px;
+  }
+  
+  .about-containerhome h2 {
+      font-size: 1.8em;
+  }
+  
+  .about-containerhome p {
+      font-size: 1em;
+  }
+  
+  /* Penyesuaian line/divider */
+  .section-divider {
+      width: 100%;
+      margin: 30px auto;
+  }
+  
+  /* Gallery Content Block */
+  .gallery-content {
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+      text-align: center;
+  }
+  
+  .gallery-content img {
+      width: 100%; 
+      max-width: 300px;
+  }
+  
+  .gallery-content .text {
+      max-width: 100%;
+  }
+  
+  .gallery-content .add-btn {
+      width: 100%;
+      max-width: 200px;
+      margin: 0 auto;
+  }
+
+  .line {
+    display: none;
+  }
+
+  .collection-section{
+    margin-top: -80px;
+  }
+
+  .gallery-section{
+    margin-top: -100px;
+  }
+
+  .about-section{
+    margin-top: -115px;
+  }
+
+
   @media (max-width: 480px) {
       .navbar {
           flex-direction: column; 
-          height: auto;
-          justify-content: center;
+          padding: 10px 0;
           gap: 10px;
+      }
+      .logo img {
+          height: 60px; 
       }
       .nav-links {
           width: 100%;
-          justify-content: center;
+          justify-content: center; 
           gap: 20px;
           margin-top: 5px;
       }
-      .navbar > .nav-links:first-of-type,
-      .navbar > .nav-links:last-of-type {
-          order: initial;
-          padding: 0;
+      .nav-links:first-of-type {
+        order: initial;
+        margin-bottom: 5px; 
       }
+      .nav-links:last-of-type {
+        order: initial;
+        margin-top: 5px; 
+      }
+
+      
   }
 }
