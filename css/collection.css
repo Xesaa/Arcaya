@@ -36,9 +36,6 @@
     gap: 20px; 
 }
 
-/* Anda bisa mengimpor item-card styling dari style.css/gallery-style.css
-   atau pastikan item-card styling di style.css mencakup halaman ini. */
-
 .item-card {
     background-color: #1A1A1A;
     width: 21rem;

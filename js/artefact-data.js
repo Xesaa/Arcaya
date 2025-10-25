@@ -27,13 +27,13 @@ const ARTEFACT_DATA = [
     detailUrl: 'items/arca-prajnaparamita.html'
   },
   {
-    id: 'tifa-honai',
+    id: 'tifa-hanoi',
     title: 'Tifa Honai – Alat Musik Ritual Papua',
     tahun: 'Prasejarah turun temurun',
     asal: 'Papua',
     category: 'Alat Musik',
     thumb: 'asset/Tifa Hanoi.png',
-    detailUrl: 'items/tifa-honai.html'
+    detailUrl: 'items/tifa-hanoi.html'
   },
   {
     id: 'sasando',

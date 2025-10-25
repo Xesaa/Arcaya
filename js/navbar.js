@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(data => {
         navbarContainer.innerHTML = data;
 
-        // Jalankan highlight link aktif setelah navbar selesai dimuat
         const currentPage = window.location.pathname.split("/").pop().toLowerCase();
         const links = document.querySelectorAll('.nav-links a');
 
