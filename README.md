@@ -50,7 +50,7 @@ Dibangun sepenuhnya menggunakan HTML, CSS, dan JavaScript — tanpa backend — 
 
 1. **Clone repositori ini**
    ```bash
-   git clone https://github.com/username/arcaya.git
+   git clone https://github.com/Xesaa/Arcaya.git
 
    cd arcaya
    
