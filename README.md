@@ -52,7 +52,7 @@ Dibangun sepenuhnya menggunakan HTML, CSS, dan JavaScript — tanpa backend — 
    ```bash
    git clone https://github.com/Xesaa/Arcaya.git
 
-   cd arcaya
+   cd Arcaya
    
   Buka index.html di browser
   Tidak memerlukan server atau instalasi tambahan — cukup buka file langsung.
